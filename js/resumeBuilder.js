@@ -65,7 +65,7 @@ var work = {
 };
 
 var projects = {
-	"project" : [
+	"projects" : [
 		{
 			"title": "Bug",
 			"dates": "2012",
