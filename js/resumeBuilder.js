@@ -78,7 +78,8 @@ var projects = {
 			"decsription": "the cooking",
 			"images": ["placehold.it/250x250", "placehold.it/250x250"]
 		}
-	]
+	],
+	"display": 
 };
 
 
@@ -160,15 +161,6 @@ function displayWork() {
 };
 
 displayWork();
-
-$(document).click(function(loc) { // your code goes here 
-	//var logClicks = loc.pageX + " " + loc.pageY;
-	//console.log(logClicks);
-	var x = loc.pageX;
-	var y = loc.pageY;
-
-	logClicks(x,y);
-});	
 
 function inName(oldname) {
 	var finalName = oldname;
