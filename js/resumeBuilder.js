@@ -14,10 +14,18 @@ var bio = {
 		],
 	"biopic" : "images/fry.jpg",
 	"display": function() {
-		$("#header").prepend([formattedName]);
-		$("#header").append([formattedRole]);
-		$("#header").append([formattedBioPic]);
-		$("#header").append([formattedWelcomeMsg]);
+		var formattedName =
+			HTMLheaderName.replace("%data%", bio.name);
+			$("#header").append([formattedName]);
+		var formattedRole = 
+			HTMLheaderRole.replace("%data%", bio.role);
+			$("#header").append([formattedRole]);
+		var formattedBioPic =
+			HTMLbioPic.replace("%data%", bio.biopic);
+			$("#header").append([formattedBioPic]);
+		var formattedWelcomeMsg = 
+			HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+			$("#header").append([formattedWelcomeMsg]);
 
 		if(bio.skills.length > 0) {
 			$("#header").append([HTMLskillsStart])
@@ -113,30 +121,22 @@ var projects = {
 		$("#projects").append([HTMLprojectStart]);
 
 		var formattedProjectTitle =
-		HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-		$(".project-entry:last").append([formattedProjectTitle]);
+			HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+			$(".project-entry:last").append([formattedProjectTitle]);
 		var formattedProjectDates =
-		HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-		$(".project-entry:last").append([formattedProjectDates]);
+			HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+			$(".project-entry:last").append([formattedProjectDates]);
 		var formattedProjectDscp =
-		HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		$(".project-entry:last").append([formattedProjectDscp]);
+			HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+			$(".project-entry:last").append([formattedProjectDscp]);
 		var formattedProjectImage =
-		HTMLprojectImage.replace("%data%", projects.projects[project].image);
-		$(".project-entry:last").append([formattedProjectImage]);
+			HTMLprojectImage.replace("%data%", projects.projects[project].image);
+			$(".project-entry:last").append([formattedProjectImage]);
 
 		}
 	}
 };
 
-var formattedName =
-	HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = 
-	HTMLheaderRole.replace("%data%", bio.role);
-var formattedBioPic =
-	HTMLbioPic.replace("%data%", bio.biopic);
-var formattedWelcomeMsg = 
-	HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 var formattedEmail =
 	HTMLemail.replace("%data%", bio.contacts.email);
 var formattedMobile =
