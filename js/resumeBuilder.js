@@ -1,18 +1,41 @@
 var bio = {
-		"name" : "Justin Stonitsch",
-		"role" : "Web Developer",
-		"contacts" : {
-			"mobile" : 2392076441,
-			"email" :"justinstonitsch@gmail.com",
-			"github" : "jstonitsch",
-			"twitter" : "@jstonitsch",
-			"location" : "Ft. Myers, FL"
-		},
-		"welcomeMessage" : "Thanks for Coming By!!",
-		"skills" : [
-		"Creative", "Awesomeness", "Efficent", "Collabritive"
-			],
-		"biopic" : "images/fry.jpg",
+	"name" : "Justin Stonitsch",
+	"role" : "Web Developer",
+	"contacts" : {
+		"mobile" : 2392076441,
+		"email" :"justinstonitsch@gmail.com",
+		"github" : "jstonitsch",
+		"twitter" : "@jstonitsch",
+		"location" : "Ft. Myers, FL"
+	},
+	"welcomeMessage" : "Thanks for Coming By!!",
+	"skills" : [
+	"Creative", "Awesomeness", "Efficent", "Collabritive"
+		],
+	"biopic" : "images/fry.jpg",
+	"display": function() {
+		$("#header").prepend([formattedName]);
+		$("#header").append([formattedRole]);
+		$("#header").append([formattedBioPic]);
+		$("#header").append([formattedWelcomeMsg]);
+
+		if(bio.skills.length > 0) {
+			$("#header").append([HTMLskillsStart])
+
+			var formattedSkills =
+				HTMLskills.replace("%data%", bio.skills[0]);
+				$("#skills").append([formattedSkills]);
+			formattedSkills =
+				HTMLskills.replace("%data%", bio.skills[1]);
+				$("#skills").append([formattedSkills]);
+			formattedSkills =
+				HTMLskills.replace("%data%", bio.skills[2]);
+				$("#skills").append([formattedSkills]);
+			formattedSkills =
+				HTMLskills.replace("%data%", bio.skills[3]);
+				$("#skills").append([formattedSkills]);
+		};
+	}
 };
 
 var education = {
@@ -42,7 +65,10 @@ var education = {
 			"date": 2015,
 			"url": "www.udacity.com",
 		}
-	]
+	],
+	"display": function() {
+
+	}
 };
 
 var work = {
@@ -61,7 +87,10 @@ var work = {
 			"dates": "2012 - 2013",
 			"description": "Home Networking, Alarms, Automation"
 		}
-	]
+	],
+	"display": function() {
+
+	}
 };
 
 var projects = {
@@ -79,9 +108,26 @@ var projects = {
 			"images": ["placehold.it/250x250", "placehold.it/250x250"]
 		}
 	],
-	"display": 
-};
+	"display": function() {
+	for(project in projects.projects){
+		$("#projects").append([HTMLprojectStart]);
 
+		var formattedProjectTitle =
+		HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		$(".project-entry:last").append([formattedProjectTitle]);
+		var formattedProjectDates =
+		HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		$(".project-entry:last").append([formattedProjectDates]);
+		var formattedProjectDscp =
+		HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		$(".project-entry:last").append([formattedProjectDscp]);
+		var formattedProjectImage =
+		HTMLprojectImage.replace("%data%", projects.projects[project].image);
+		$(".project-entry:last").append([formattedProjectImage]);
+
+		}
+	}
+};
 
 var formattedName =
 	HTMLheaderName.replace("%data%", bio.name);
@@ -106,11 +152,6 @@ var formattedLocation =
 var formattedSkills =
 	HTMLskills.replace("%data%", bio.skills);	
 
-
-$("#header").prepend([formattedName]);
-$("#header").append([formattedRole]);
-$("#header").append([formattedBioPic]);
-$("#header").append([formattedWelcomeMsg]);
 /*$("#header").append([HTMLskillsStart]);
 $("#header").append([formattedSkills]);
 $("#topContacts").append([formattedEmail]);
@@ -121,23 +162,6 @@ $("#topContacts").append([formattedBlog]);
 $("#topContacts").append([formattedLocation]);
 $("#workExperience").append([work["employer"]]);
 */
-
-if(bio.skills.length > 0) {
-	$("#header").append([HTMLskillsStart])
-
-	var formattedSkills =
-	HTMLskills.replace("%data%", bio.skills[0]);
-	$("#skills").append([formattedSkills]);
-	formattedSkills =
-	HTMLskills.replace("%data%", bio.skills[1]);
-	$("#skills").append([formattedSkills]);
-	formattedSkills =
-	HTMLskills.replace("%data%", bio.skills[2]);
-	$("#skills").append([formattedSkills]);
-	formattedSkills =
-	HTMLskills.replace("%data%", bio.skills[3]);
-	$("#skills").append([formattedSkills]);
-};
 
 function displayWork() {
 	for(job in work.jobs) {
@@ -174,27 +198,7 @@ function inName(oldname) {
     return finalName;
 };
 
-projects.display = function() {
-	for(project in projects.projects){
-		$("#projects").append([HTMLprojectStart]);
-
-		var formattedProjectTitle =
-		HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-		$(".project-entry:last").append([formattedProjectTitle]);
-		var formattedProjectDates =
-		HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-		$(".project-entry:last").append([formattedProjectDates]);
-		var formattedProjectDscp =
-		HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		$(".project-entry:last").append([formattedProjectDscp]);
-		var formattedProjectImage =
-		HTMLprojectImage.replace("%data%", projects.projects[project].image);
-		$(".project-entry:last").append([formattedProjectImage]);
-
-
-	}
-};
-
+bio.display();
 projects.display();
 
 $("#mapDiv").append([googleMap]);
