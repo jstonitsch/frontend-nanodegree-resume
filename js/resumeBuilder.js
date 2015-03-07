@@ -2,18 +2,49 @@ var bio = {
 		"name" : "Justin Stonitsch",
 		"role" : "Web Developer",
 		"contacts" : {
-			"email" :"justinstonitsch@gmail.com",
 			"mobile" : 2392076441,
-			"twitter" : "@jstonitsch",
+			"email" :"justinstonitsch@gmail.com",
 			"github" : "jstonitsch",
+			"twitter" : "@jstonitsch",
 			"location" : "Ft. Myers, FL"
 		},
-		"bioPic" : "images/fry.jpg",
-		"welcome" : "Thanks for Coming By!!",
+		"welcomeMessage" : "Thanks for Coming By!!",
 		"skills" : [
 		"Creative", "Awesomeness", "Efficent", "Collabritive"
-			]
+			],
+		"biopic" : "images/fry.jpg",
 };
+
+var education = {
+	"schools" : [
+		{
+			"name": "Camdenton High School",
+			"location": "Camdenton, MO, US",
+			"degree": "Gen Ed",
+			"majors": ["N/A"],
+			"dates": 2004,
+			"url": "www.camdentonschools.org"
+		},
+		{
+			"name": "Missouri State University",
+			"location": "Springfield, MO, US",
+			"degree": "N/A",
+			"majors": ["N/A"],
+			"dates": 2006;
+			"url": "www.missouristate.edu"
+		}
+
+	],
+	"onlineCourses": [
+		{
+			"title": "Frontend Web Developer Nanodegree",
+			"school": "Udacity",
+			"date": 2015,
+			"url": "www.udacity.com",
+		}
+	]
+};
+
 var work = {
 	"jobs": [
 		{
@@ -32,23 +63,7 @@ var work = {
 		}
 	]
 };
-var education = {
-	"schools" : [
-		{
-			"name": "Camdenton High School",
-			"location": "Camdenton, MO, US",
-			"degree": "Gen Ed",
-			"major": "N/A"
-		},
-		{
-			"name": "Missouri State University",
-			"location": "Springfield, MO, US",
-			"degree": "N/A",
-			"major": "N/A"
-		}
 
-	]
-};
 var projects = {
 	"project" : [
 		{
