@@ -6,7 +6,6 @@ var bio = {
 			"mobile" : 2392076441,
 			"twitter" : "@jstonitsch",
 			"github" : "jstonitsch",
-			"blog" : "N/A",
 			"location" : "Ft. Myers, FL"
 		},
 		"bioPic" : "images/fry.jpg",
