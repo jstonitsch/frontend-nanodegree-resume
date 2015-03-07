@@ -70,13 +70,13 @@ var projects = {
 			"title": "Bug",
 			"dates": "2012",
 			"decsription": "a collection",
-			"images": []
+			"images": ["placehold.it/250x250", "placehold.it/250x250"]
 		},
 		{
 			"title": "Butter",
 			"dates": "2014",
 			"decsription": "the cooking",
-			"images": []
+			"images": ["placehold.it/250x250", "placehold.it/250x250"]
 		}
 	]
 };
