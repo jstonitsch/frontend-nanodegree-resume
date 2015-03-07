@@ -30,7 +30,7 @@ var education = {
 			"location": "Springfield, MO, US",
 			"degree": "N/A",
 			"majors": ["N/A"],
-			"dates": 2006;
+			"dates": 2006,
 			"url": "www.missouristate.edu"
 		}
 
@@ -87,9 +87,9 @@ var formattedName =
 var formattedRole = 
 	HTMLheaderRole.replace("%data%", bio.role);
 var formattedBioPic =
-	HTMLbioPic.replace("%data%", bio.bioPic);
+	HTMLbioPic.replace("%data%", bio.biopic);
 var formattedWelcomeMsg = 
-	HTMLWelcomeMsg.replace("%data%", bio.welcome);
+	HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 var formattedEmail =
 	HTMLemail.replace("%data%", bio.contacts.email);
 var formattedMobile =
@@ -183,20 +183,20 @@ function inName(oldname) {
 };
 
 projects.display = function() {
-	for(project in projects.project){
+	for(projects in projects.projects){
 		$("#projects").append([HTMLprojectStart]);
 
 		var formattedProjectTitle =
-		HTMLprojectTitle.replace("%data%", projects.project[project].title);
+		HTMLprojectTitle.replace("%data%", projects.projects[projects].title);
 		$(".project-entry:last").append([formattedProjectTitle]);
 		var formattedProjectDates =
-		HTMLprojectDates.replace("%data%", projects.project[project].dates);
+		HTMLprojectDates.replace("%data%", projects.projects[projects].dates);
 		$(".project-entry:last").append([formattedProjectDates]);
 		var formattedProjectDscp =
-		HTMLprojectDescription.replace("%data%", projects.project[project].description);
+		HTMLprojectDescription.replace("%data%", projects.projects[projects].description);
 		$(".project-entry:last").append([formattedProjectDscp]);
 		var formattedProjectImage =
-		HTMLprojectImage.replace("%data%", projects.project[project].image);
+		HTMLprojectImage.replace("%data%", projects.projects[projects].image);
 		$(".project-entry:last").append([formattedProjectImage]);
 
 
