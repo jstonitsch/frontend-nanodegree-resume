@@ -183,20 +183,20 @@ function inName(oldname) {
 };
 
 projects.display = function() {
-	for(projects in projects.projects){
+	for(project in projects.projects){
 		$("#projects").append([HTMLprojectStart]);
 
 		var formattedProjectTitle =
-		HTMLprojectTitle.replace("%data%", projects.projects[projects].title);
+		HTMLprojectTitle.replace("%data%", projects.projects[project].title);
 		$(".project-entry:last").append([formattedProjectTitle]);
 		var formattedProjectDates =
-		HTMLprojectDates.replace("%data%", projects.projects[projects].dates);
+		HTMLprojectDates.replace("%data%", projects.projects[project].dates);
 		$(".project-entry:last").append([formattedProjectDates]);
 		var formattedProjectDscp =
-		HTMLprojectDescription.replace("%data%", projects.projects[projects].description);
+		HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 		$(".project-entry:last").append([formattedProjectDscp]);
 		var formattedProjectImage =
-		HTMLprojectImage.replace("%data%", projects.projects[projects].image);
+		HTMLprojectImage.replace("%data%", projects.projects[project].image);
 		$(".project-entry:last").append([formattedProjectImage]);
 
 
