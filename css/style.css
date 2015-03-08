@@ -1,7 +1,7 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Verdana', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .clearfix {
@@ -13,9 +13,13 @@
   padding-right: 5%;
 }
 
+.namerole {
+  text-align: center;
+}
+
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #C0DE00;
   line-height: 48px;
   display: inline;
 }
@@ -48,6 +52,15 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
+hr {
+  border: 0;
+  height: 2px;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #2FA2CB, #333, #2FA2CB);
+  background-image: -moz-linear-gradient(left, #2FA2CB, #333, #2FA2CB);
+  background-image: -ms-linear-gradient(left, #2FA2CB, #333, #2FA2CB);
+  background-image: -o-linear-gradient(left, #2FA2CB, #333, #2FA2CB);
+}
 
 .date-text {
   font-style: italic;
@@ -116,7 +129,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #3399FF;
+  background-color: #2FA2CB;
 }
 
 .flex-box {
