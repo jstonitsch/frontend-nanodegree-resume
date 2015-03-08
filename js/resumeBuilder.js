@@ -156,7 +156,24 @@ var work = {
 		}
 	],
 	"display": function() {
+		for(job in work.jobs) {
+			$("#workExperience").append([HTMLworkStart]);
 
+			var formattedWorkEmployer =
+				HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+			var formattedWorkTitle =
+				HTMLworkTitle.replace("%data%", work.jobs[job].title);
+				$(".work-entry:last").append([formattedWorkEmployer + formattedWorkTitle]);
+			var formattedWorkDates =
+				HTMLworkDates.replace("%data%", work.jobs[job].dates);
+				$(".work-entry:last").append([formattedWorkDates]);
+			var formattedWorkLocation =
+				HTMLworkLocation.replace("%data%", work.jobs[job].location);
+				$(".work-entry:last").append([formattedWorkLocation]);
+			var formattedWorkDescription =
+				HTMLworkDescription.replace("%data%", work.jobs[job].description);
+				$(".work-entry:last").append([formattedWorkDescription]);
+		}
 	}
 };
 
@@ -196,46 +213,9 @@ var projects = {
 	}
 };
 
-					
-	
-
-function displayWork() {
-	for(job in work.jobs) {
-		$("#workExperience").append([HTMLworkStart]);
-
-		var formattedWorkEmployer =
-		HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var formattedWorkTitle =
-		HTMLworkTitle.replace("%data%", work.jobs[job].title);
-		$(".work-entry:last").append([formattedWorkEmployer + formattedWorkTitle]);
-		var formattedWorkDates =
-		HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		$(".work-entry:last").append([formattedWorkDates]);
-		var formattedWorkLocation =
-		HTMLworkLocation.replace("%data%", work.jobs[job].location);
-		$(".work-entry:last").append([formattedWorkLocation]);
-		var formattedWorkDescription =
-		HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		$(".work-entry:last").append([formattedWorkDescription]);
-	}
-};
-
-displayWork();
-
-function inName(oldname) {
-	var finalName = oldname;
-    var names = oldname.trim().split(" ");
-    names[1] = names[1].toUpperCase();
-    names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
-    finalName = names.join(" ");
-    
-    
-    // Don't delete this line!
-    return finalName;
-};
-
 bio.display();
-projects.display();
 education.display();
+work.display();
+projects.display();
 
 $("#mapDiv").append([googleMap]);
