@@ -134,7 +134,7 @@ var education = {
 			var formattedOnlineURL =
 				HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
 				$(".education-entry:last").append([formattedOnlineURL]);				
-		}
+		};
 	}
 };
 
@@ -173,7 +173,7 @@ var work = {
 			var formattedWorkDescription =
 				HTMLworkDescription.replace("%data%", work.jobs[job].description);
 				$(".work-entry:last").append([formattedWorkDescription]);
-		}
+		};
 	}
 };
 
@@ -193,23 +193,33 @@ var projects = {
 		}
 	],
 	"display": function() {
-	for(project in projects.projects){
-		$("#projects").append([HTMLprojectStart]);
+		for(project in projects.projects){
+			$("#projects").append([HTMLprojectStart]);
 
-		var formattedProjectTitle =
-			HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-			$(".project-entry:last").append([formattedProjectTitle]);
-		var formattedProjectDates =
-			HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-			$(".project-entry:last").append([formattedProjectDates]);
-		var formattedProjectDscp =
-			HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-			$(".project-entry:last").append([formattedProjectDscp]);
-		var formattedProjectImage =
-			HTMLprojectImage.replace("%data%", projects.projects[project].images);
-			$(".project-entry:last").append([formattedProjectImage]);
-
-		}
+			var formattedProjectTitle =
+				HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+				$(".project-entry:last").append([formattedProjectTitle]);
+			var formattedProjectDates =
+				HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+				$(".project-entry:last").append([formattedProjectDates]);
+			var formattedProjectDscp =
+				HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+				$(".project-entry:last").append([formattedProjectDscp]);
+			/*var formattedProjectImage =
+				HTMLprojectImage.replace("%data%", projects.projects[project].images);
+				$(".project-entry:last").append([formattedProjectImage]);
+			*/			
+			if(projects.projects[project].images.length > 0) {
+				var formattedProjectImage =
+					HTMLprojectImage.replace("%data%", projects.projects[project].images);
+				formattedSkills =
+					HTMLprojectImage.replace("%data%", projects.projects[0].images);
+					$(".project-entry:last").append([formattedProjectImage]);
+				formattedSkills =
+					HTMLprojectImage.replace("%data%", projects.projects[1].images);
+					$(".project-entry:last").append([formattedProjectImage]);
+			};
+		};	
 	}
 };
 
