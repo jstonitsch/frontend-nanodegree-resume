@@ -96,16 +96,16 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #C0DE00;
   display: none;
 }
 
-.orange {
-  background-color: #F5AE23;
+.green {
+  background-color: #C0DE00;
 }
 
-.orange-text {
-  color: #F5AE23;
+.green-text {
+  color: #C0DE00;
 }
 
 .white-text {
@@ -119,8 +119,8 @@ a {
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4A4A4A;
+.blue {
+  background-color: #2FA2CB;
 }
 
 /* TODO: Replace with image later */
