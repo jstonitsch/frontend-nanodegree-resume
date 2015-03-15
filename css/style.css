@@ -141,8 +141,16 @@ nav {
   margin-top: 10px;
 }
 
+nav a {
+  padding: 10px;
+  margin-top: 0px;
+}
+
 nav a:hover {
   color: #333333;
+  background-color: #2FA2CB;
+  padding: 10px;
+  margin-top: 0px;
 }
 
 .flex-box {
