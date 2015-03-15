@@ -123,9 +123,26 @@ a {
   background-color: #2FA2CB;
 }
 
+.blue-text {
+  font-weight: bold;
+  color: #2FA2CB;
+}
+
 /* TODO: Replace with image later */
 #header {
   background-color: #2FA2CB;
+}
+
+nav {
+  height: 60px;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+nav a:hover {
+  color: #333333;
 }
 
 .flex-box {
