@@ -97,13 +97,12 @@ var education = {
   "display": function() {
 		for(school in education.schools) {
 	  	$("#education").append([HTMLschoolStart]);
-	  	var formattedSchoolName = HTMLschoolName.replace("#", education.schools[school].url);
-	  	var formattedSchoolName =
-				HTMLschoolName.replace("%data%", education.schools[school].name);1
-				$(".education-entry:last").append([formattedSchoolName]);
+	  	var formattedSchoolName = HTMLschoolName.replace('#', education.schools[school].url);
+	  	formattedSchoolName =
+				HTMLschoolName.replace("%data%", education.schools[school].name);
 	  	var formattedSchoolDegree =
 				HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-				$(".education-entry:last").append([formattedSchoolDegree]);
+				$(".education-entry:last").append([formattedSchoolName + formattedSchoolDegree]);
 	  	var formattedSchoolDates =
 				HTMLschoolDates.replace("%data%", education.schools[school].dates);
 				$(".education-entry:last").append([formattedSchoolDates]);
@@ -114,16 +113,17 @@ var education = {
 				HTMLschoolMajor.replace("%data%", education.schools[school].majors);
 				$(".education-entry:last").append([formattedSchoolMajor]);
 		};
+
+		$("#education").append([HTMLonlineClasses]);
+
 		for(onlineCourse in education.onlineCourses) {
 			$("#education").append([HTMLschoolStart]);
 
 			var formattedOnlineTitle =
 				HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
-				$(".education-entry:last").append([HTMLonlineClasses]);
-				$(".education-entry:last").append([formattedOnlineTitle]);
 			var formattedOnlineSchool =
 				HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
-				$(".education-entry:last").append([formattedOnlineSchool]);
+				$(".education-entry:last").append([formattedOnlineTitle + formattedOnlineSchool]);
 			var formattedOnlineDates =
 				HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
 				$(".education-entry:last").append([formattedOnlineDates]);
@@ -201,10 +201,7 @@ var projects = {
 			var formattedProjectDscp =
 				HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 				$(".project-entry:last").append([formattedProjectDscp]);
-			/*var formattedProjectImage =
-				HTMLprojectImage.replace("%data%", projects.projects[project].images);
-				$(".project-entry:last").append([formattedProjectImage]);
-			*/
+
 			if(projects.projects[project].images.length > 0) {
 				var formattedProjectImage =
 					HTMLprojectImage.replace("%data%", projects.projects[project].images);
