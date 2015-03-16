@@ -65,7 +65,7 @@ The International Name challenge in Lesson 2 where you'll create a function that
 $(document).ready(function() {
   $('button').click(function() {
     var iName = inName(bio.name) || function(){};
-    $('#name').html(iName);  
+    $('#name').html(iName);
   });
 });
 
@@ -175,7 +175,7 @@ function initializeMap() {
       'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
       '(last visited June 22, 2009).</p>'+
       '</div>'+
-      '</div>';  
+      '</div>';
     // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({
       map: map,
