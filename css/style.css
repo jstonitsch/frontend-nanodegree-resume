@@ -173,6 +173,11 @@ ul {
   list-style-type: none;
 }
 
+.project-entry img {
+  width: 350px;
+  height: 250px;
+}
+
 .biopic {
   float: left;
   padding: 10px;

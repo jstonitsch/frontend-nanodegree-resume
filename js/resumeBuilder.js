@@ -10,7 +10,7 @@ var bio = {
   },
   "welcomeMessage" : "Thanks for Coming By!!",
   "skills" : [
-    "Creative", "Awesomeness", "Efficent", "Collabritive"
+    "Creative", "Awesomeness", "Efficent", "Collabritive", "HTML", "CSS", "Javascript"
   ],
   "biopic" : "images/fry.jpg",
   "display": function() {
@@ -49,20 +49,11 @@ var bio = {
 
 		if(bio.skills.length > 0) {
 	  	$("#header").append([HTMLskillsStart])
-	  	var formattedSkills =
-				HTMLskills.replace("%data%", bio.skills);
-	  	formattedSkills =
-				HTMLskills.replace("%data%", bio.skills[0]);
-				$("#skills").append([formattedSkills]);
-	 		formattedSkills =
-				HTMLskills.replace("%data%", bio.skills[1]);
-				$("#skills").append([formattedSkills]);
-	  	formattedSkills =
-				HTMLskills.replace("%data%", bio.skills[2]);
-				$("#skills").append([formattedSkills]);
-	  	formattedSkills =
-				HTMLskills.replace("%data%", bio.skills[3]);
-				$("#skills").append([formattedSkills]);
+	  	for(skill in bio.skills) {
+	  		var formattedSkills =
+					HTMLskills.replace("%data%", bio.skills[skill]);
+					$("#skills").append([formattedSkills]);
+			};
 		};
   }
 };
@@ -97,7 +88,7 @@ var education = {
   "display": function() {
 		for(school in education.schools) {
 	  	$("#education").append([HTMLschoolStart]);
-	  	var formattedSchoolName = HTMLschoolName.replace('#', education.schools[school].url);
+	  	var formattedSchoolName = HTMLschoolName.replace("#", education.schools[school].url);
 	  	formattedSchoolName =
 				HTMLschoolName.replace("%data%", education.schools[school].name);
 	  	var formattedSchoolDegree =
@@ -176,16 +167,16 @@ var work = {
 var projects = {
 	"projects" : [
 		{
-			"title": "Bug",
-			"dates": "2012",
-			"description": "a collection",
-			"images": ["http://placehold.it/250x250", "http://placehold.it/250x250"]
+			"title": "SFEV Digital Sign",
+			"dates": "2015",
+			"description": "A webpage formatted to display on a digital sign in showroom",
+			"images": ["images/sfevSignScreenshot.png"]
 		},
 		{
 			"title": "Butter",
 			"dates": "2014",
 			"description": "the cooking",
-			"images": ["http://placehold.it/250x250", "http://placehold.it/250x250"]
+			"images": ["http://placehold.it/350x250", "http://placehold.it/350x250"]
 		}
 	],
 	"display": function() {
@@ -203,14 +194,11 @@ var projects = {
 				$(".project-entry:last").append([formattedProjectDscp]);
 
 			if(projects.projects[project].images.length > 0) {
+				for(image in projects.projects[project].images) {
 				var formattedProjectImage =
-					HTMLprojectImage.replace("%data%", projects.projects[project].images);
-				formattedProjectImage =
-					HTMLprojectImage.replace("%data%", projects.projects[0].images);
+					HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
 					$(".project-entry:last").append([formattedProjectImage]);
-				formattedProjectImage =
-					HTMLprojectImage.replace("%data%", projects.projects[1].images);
-					$(".project-entry:last").append([formattedProjectImage]);
+				};
 			};
 		};
 	}
