@@ -10,7 +10,13 @@ var bio = {
   },
   "welcomeMessage" : "Thanks for Coming By!!",
   "skills" : [
-    "Creative", "Awesomeness", "Efficent", "Collabritive", "HTML", "CSS", "Javascript"
+    "Creative",
+    "Awesomeness",
+    "Efficent",
+    "Collabritive",
+    "HTML",
+    "CSS",
+    "Javascript"
   ],
   "biopic" : "images/fry.jpg",
   "display": function() {
@@ -169,14 +175,14 @@ var projects = {
 		{
 			"title": "SFEV Digital Sign",
 			"dates": "2015",
-			"description": "A webpage formatted to display on a digital sign in showroom",
+			"description": "A webpage formatted to display on a digital sign in showroom using a raspberry pi.",
 			"images": ["images/sfevSignScreenshot.png"]
 		},
 		{
-			"title": "Butter",
+			"title": "Dogs",
 			"dates": "2014",
-			"description": "the cooking",
-			"images": ["http://placehold.it/350x250", "http://placehold.it/350x250"]
+			"description": "Pnut and Coco",
+			"images": ["images/pnut.jpg", "images/coco.jpg"]
 		}
 	],
 	"display": function() {
