@@ -1,0 +1,6 @@
+Udacity.com Javascript Basics Class
+Udacity.com Intro to jQuery Class
+jQuery.com reference
+google Fonts http://www.google.com/fonts/#QuickUsePlace:quickUse
+css tricks  https://css-tricks.com/examples/hrs/
+MDN CSS  https://developer.mozilla.org/en-US/docs/Web/CSS/:hover

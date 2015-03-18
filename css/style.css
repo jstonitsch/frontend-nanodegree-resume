@@ -1,7 +1,7 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .clearfix {
@@ -15,7 +15,7 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #C0DE00;
   line-height: 48px;
   display: inline;
 }
@@ -48,6 +48,15 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
+hr {
+  border: 0;
+  height: 2px;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #2FA2CB, #333, #2FA2CB);
+  background-image: -moz-linear-gradient(left, #2FA2CB, #333, #2FA2CB);
+  background-image: -ms-linear-gradient(left, #2FA2CB, #333, #2FA2CB);
+  background-image: -o-linear-gradient(left, #2FA2CB, #333, #2FA2CB);
+}
 
 .date-text {
   font-style: italic;
@@ -87,16 +96,16 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #C0DE00;
   display: none;
 }
 
-.orange {
-  background-color: #F5AE23;
+.green {
+  background-color: #C0DE00;
 }
 
-.orange-text {
-  color: #F5AE23;
+.green-text {
+  color: #C0DE00;
 }
 
 .white-text {
@@ -110,13 +119,38 @@ a {
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4A4A4A;
+.blue {
+  background-color: #2FA2CB;
+}
+
+.blue-text {
+  font-weight: bold;
+  color: #2FA2CB;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #2FA2CB;
+}
+
+nav {
+  height: 60px;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+nav a {
+  padding: 10px;
+  margin-top: 0px;
+}
+
+nav a:hover {
+  color: #333333;
+  background-color: #2FA2CB;
+  padding: 10px;
+  margin-top: 0px;
 }
 
 .flex-box {
@@ -137,6 +171,11 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+.project-entry img {
+  width: 350px;
+  height: 250px;
 }
 
 .biopic {
